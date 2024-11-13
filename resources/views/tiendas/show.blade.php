@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Detalle Tienda</h1>
+    <div class="container">
+        <h1>Detalles de la Tienda</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h3>{{ $tienda->nombre }}</h3>
+                <p><strong>Dirección:</strong> {{ $tienda->direccion }}</p>
+            </div>
+        </div>
 
-    <p><strong>Nombre:</strong> {{ $tienda->nombre }}</p>
-    <p><strong>Ubicación:</strong> {{ $tienda->ubicacion }}</p>
-    <a href="{{ route('tiendas.index') }}">Regresar</a>
+        <a href="{{ route('tiendas.index') }}" class="btn btn-primary mt-3">Volver a la lista</a>
+    </div>
 @endsection

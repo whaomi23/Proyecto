@@ -21,8 +21,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    
+     //public function index()
+    //{
+      //  return view('home');
+    //}
+
     public function index()
     {
-        return view('home');
+        // Redirigir a la página de Tiendas después del login
+        return redirect()->route('tiendas.index');
     }
 }

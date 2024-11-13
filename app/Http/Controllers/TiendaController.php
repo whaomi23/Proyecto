@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class TiendaController extends Controller
 {
-    // Constructor para proteger rutas
+    // Constructor para proteger las rutas
     public function __construct()
     {
         $this->middleware('auth');
@@ -31,7 +31,7 @@ class TiendaController extends Controller
     {
         $request->validate([
             'nombre' => 'required',
-            'ubicacion' => 'required',
+            'direccion' => 'required',
         ]);
 
         Tienda::create($request->all());
@@ -50,7 +50,7 @@ class TiendaController extends Controller
     {
         $request->validate([
             'nombre' => 'required',
-            'ubicacion' => 'required',
+            'direccion' => 'required',
         ]);
 
         $tienda->update($request->all());
